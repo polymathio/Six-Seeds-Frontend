@@ -12,6 +12,7 @@ html {
 
 body {
   line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
   @include font($georgia, $base-font-size, 400);
 }
 
@@ -23,13 +24,18 @@ body {
 
 %header {
   margin-top: 0;
+  padding-top: 0;
   margin-bottom: base(1);
   //text-rendering: optimizeLegibility;
   color:  color(text);
   line-height: 1.1em;
-  @include font($helvetica, 16, 500);
+  @include font($helvetica, 16, 600);
   &::selection{
     //color: #000;
+  }
+
+  *+& {
+    padding-top: base(0.5);
   }
 }
 

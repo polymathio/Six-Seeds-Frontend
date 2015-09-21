@@ -513,6 +513,7 @@ html {
 
 body {
   line-height: 1.8em;
+  -webkit-font-smoothing: antialiased;
   font-family: "georgia", serif;
   font-weight: 400;
   font-size: 16px;
@@ -533,13 +534,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
+  padding-top: 0;
   margin-bottom: 16px;
   color: #3a3a3a;
   line-height: 1.1em;
   font-family: "helvetica", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   font-size: 1rem;
+}
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  padding-top: 8px;
 }
 
 h1 {
@@ -579,10 +584,175 @@ h6 {
   margin: 0 auto;
 }
 
-/* Components */
+.o-button {
+  display: inline-block;
+  padding: 0.2rem 1.5rem;
+  background: #275D74;
+  border-radius: 2px;
+  color: #FEFEFE;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: "helvetica", sans-serif;
+  font-weight: 600;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
+.o-button:hover, .o-button:active, .o-button:focus {
+  background: #debe3a;
+}
+.o-button--full {
+  display: block;
+  text-align: center;
+}
+
+/* Modules */
+.m-header {
+  position: relative;
+  padding-top: 9rem;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+.m-header__title {
+  margin: 0;
+  color: #FEFEFE;
+  font-weight: 600;
+}
+.m-header__subtitle {
+  margin: 0;
+  padding: 0;
+  color: rgba(254, 254, 254, 0.9);
+  font-family: "georgia", serif;
+  font-weight: 400;
+}
+.m-header__subtitle a {
+  font-weight: 400;
+  color: #fefefe;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
+.m-header__subtitle a:hover, .m-header__subtitle a:active, .m-header__subtitle a:focus {
+  color: #275D74;
+}
+.m-header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: #69B6D6;
+  background: -webkit-linear-gradient(top, #69B6D6 25%, #275D74 200%);
+  background: linear-gradient(to bottom, #69B6D6 25%, #275D74 200%);
+}
+.m-header__links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.m-header__links:before {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 40%;
+  height: 0.4rem;
+  background: #275D74;
+}
+.m-header__links li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.m-post {
+  position: relative;
+  display: table;
+}
+.m-post__content {
+  display: table-cell;
+  width: 100%;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+}
+.m-post__sidebar {
+  min-width: 300px;
+  display: table-cell;
+  padding-bottom: 4rem;
+}
+.m-post__sidebar > * {
+  margin-bottom: 1rem;
+}
+
+.m-post-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+.m-post-list__basic, .m-post-list__full {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+  font-size: 14px;
+}
+.m-post-list__basic:before, .m-post-list__basic:after, .m-post-list__full:before, .m-post-list__full:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.m-post-list__basic:after, .m-post-list__full:after {
+  clear: both;
+}
+.m-post-list__basic a, .m-post-list__full a {
+  text-decoration: none;
+}
+.m-post-list__image {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  background-position: center;
+  background-size: cover;
+}
+.m-post-list__full .m-post-list__image {
+  float: none;
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 0.5rem;
+}
+.m-post-list__author {
+  padding-top: 0.25rem;
+  margin: 0;
+  font-size: 13px;
+  font-family: "georgia", serif;
+  font-weight: 400;
+  color: #9A9A9A;
+}
+.m-post-list__title {
+  padding-top: 0;
+  margin-bottom: 0rem;
+  font-size: 15px;
+  height: 3.6rem;
+  overflow: hidden;
+}
+.m-post-list__full .m-post-list__title {
+  overflow: auto;
+  height: auto;
+  margin-bottom: 0.25rem;
+}
+
 /* Theming */
-/* Utility */
+/* Utility & Helpers */
 /*  */
 html {
-  background-color: whitesmoke;
+  background-color: #FEFEFE;
 }

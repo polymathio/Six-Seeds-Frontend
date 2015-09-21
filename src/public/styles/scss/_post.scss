@@ -1,0 +1,21 @@
+.m-post {
+	position: relative;
+	display: table;
+
+	&__content {
+		display: table-cell;
+		width: 100%;
+		padding-right: 2rem;
+		padding-bottom: 4rem;
+	}
+
+	&__sidebar {
+		min-width: 300px;
+		display: table-cell;
+		padding-bottom: 4rem;
+
+		& > * {
+			margin-bottom: 1rem;
+		}
+	}
+}
