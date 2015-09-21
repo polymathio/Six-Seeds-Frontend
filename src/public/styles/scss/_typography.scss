@@ -1,6 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 
-$open-sans: 'Open Sans', sans-serif;
+$open-sans: 'Open Sans', sans-serif; */
+
+$helvetica: 'helvetica', sans-serif;
+$georgia: 'georgia', serif;
 
 html {
   color: color(text);
@@ -9,7 +12,7 @@ html {
 
 body {
   line-height: 1.8em;
-  @include font($open-sans, $base-font-size, 300);
+  @include font($georgia, $base-font-size, 400);
 }
 
 ::selection {
@@ -24,7 +27,7 @@ body {
   //text-rendering: optimizeLegibility;
   color:  color(text);
   line-height: 1.1em;
-  @include font($open-sans, 16, 300);
+  @include font($helvetica, 16, 500);
   &::selection{
     //color: #000;
   }

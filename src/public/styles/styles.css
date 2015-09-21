@@ -1,5 +1,4 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
 *,
 *:after,
 *:before {
@@ -406,6 +405,7 @@ th {
   padding: 0;
 }
 
+/* Base Styles */
 ul, ol, dd,
 p, figure,
 pre, table, fieldset, hr {
@@ -503,6 +503,9 @@ pre, table, fieldset, hr {
   margin-right: auto;
 }
 
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+$open-sans: 'Open Sans', sans-serif; */
 html {
   color: #3a3a3a;
   font-size: 16px;
@@ -510,8 +513,8 @@ html {
 
 body {
   line-height: 1.8em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-family: "georgia", serif;
+  font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -533,8 +536,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 16px;
   color: #3a3a3a;
   line-height: 1.1em;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-family: "helvetica", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -569,37 +572,17 @@ h6 {
   font-size: 1rem;
 }
 
-html {
-  background-color: whitesmoke;
-}
-
-.container {
+/* Objects */
+.o-container {
   width: 90%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.vertical-align--table {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-.vertical-align--table .vertical-align--table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-html, body {
-  height: 100%;
-  text-align: center;
-}
-
-.grid {
-  margin: 32px 0;
-}
-.grid div {
-  height: 32px;
-  margin-bottom: 20px;
-  background-clip: content-box;
-  background-color: #d6d6d6;
+/* Components */
+/* Theming */
+/* Utility */
+/*  */
+html {
+  background-color: whitesmoke;
 }
