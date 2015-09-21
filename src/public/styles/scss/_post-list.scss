@@ -3,9 +3,7 @@
   margin-left: 0;
   padding: 0;
   
-
-  // Default sidebar post
-  &__basic, &__full {
+  &__basic, &__full, &__third {
     display: block;
     margin-bottom: 1rem;
     position: relative;
@@ -14,7 +12,23 @@
     @include clearfix;
     
     a {
-      text-decoration: none;  
+      text-decoration: none;
+
+      &:hover, &:active, &:focus {
+        .m-post-list__title, .m-post-list__author {
+          color: color(blue);
+        }
+      }
+    }
+  }
+
+  &__third {
+    display: inline-block;
+    width: 30%;
+    margin-left: 4.99%;
+    margin-right: -4px;
+    &:first-child {
+      margin-left: 0;
     }
   }
 
@@ -32,6 +46,12 @@
       height: 6rem;
       margin-bottom: 0.5rem;
     }
+
+    .m-post-list__third & {
+      float: none;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__author {
@@ -42,6 +62,11 @@
     font-family: $georgia;
     font-weight: 400;
     color: color(gray);
+    transition: 0.1s;
+
+    .m-post-list__third & {
+      display: none;
+    }
   }
 
   &__title {
@@ -53,10 +78,17 @@
     overflow: hidden;
     //text-overflow: ellipsis;
 
+    transition: 0.1s;
+
     .m-post-list__full & {
       overflow: auto;
       height: auto;
       margin-bottom: 0.25rem;
+    }
+
+    .m-post-list__third & {
+      overflow: auto;
+      height: auto;
     }
   } 
 }

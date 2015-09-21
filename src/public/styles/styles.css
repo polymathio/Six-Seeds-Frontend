@@ -697,23 +697,35 @@ h6 {
   margin-left: 0;
   padding: 0;
 }
-.m-post-list__basic, .m-post-list__full {
+.m-post-list__basic, .m-post-list__full, .m-post-list__third {
   display: block;
   margin-bottom: 1rem;
   position: relative;
   font-size: 14px;
 }
-.m-post-list__basic:before, .m-post-list__basic:after, .m-post-list__full:before, .m-post-list__full:after {
+.m-post-list__basic:before, .m-post-list__basic:after, .m-post-list__full:before, .m-post-list__full:after, .m-post-list__third:before, .m-post-list__third:after {
   content: "";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.m-post-list__basic:after, .m-post-list__full:after {
+.m-post-list__basic:after, .m-post-list__full:after, .m-post-list__third:after {
   clear: both;
 }
-.m-post-list__basic a, .m-post-list__full a {
+.m-post-list__basic a, .m-post-list__full a, .m-post-list__third a {
   text-decoration: none;
+}
+.m-post-list__basic a:hover .m-post-list__title, .m-post-list__basic a:hover .m-post-list__author, .m-post-list__basic a:active .m-post-list__title, .m-post-list__basic a:active .m-post-list__author, .m-post-list__basic a:focus .m-post-list__title, .m-post-list__basic a:focus .m-post-list__author, .m-post-list__full a:hover .m-post-list__title, .m-post-list__full a:hover .m-post-list__author, .m-post-list__full a:active .m-post-list__title, .m-post-list__full a:active .m-post-list__author, .m-post-list__full a:focus .m-post-list__title, .m-post-list__full a:focus .m-post-list__author, .m-post-list__third a:hover .m-post-list__title, .m-post-list__third a:hover .m-post-list__author, .m-post-list__third a:active .m-post-list__title, .m-post-list__third a:active .m-post-list__author, .m-post-list__third a:focus .m-post-list__title, .m-post-list__third a:focus .m-post-list__author {
+  color: #69B6D6;
+}
+.m-post-list__third {
+  display: inline-block;
+  width: 30%;
+  margin-left: 4.99%;
+  margin-right: -4px;
+}
+.m-post-list__third:first-child {
+  margin-left: 0;
 }
 .m-post-list__image {
   float: left;
@@ -729,13 +741,23 @@ h6 {
   height: 6rem;
   margin-bottom: 0.5rem;
 }
+.m-post-list__third .m-post-list__image {
+  float: none;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
 .m-post-list__author {
   padding-top: 0.25rem;
   margin: 0;
   font-size: 13px;
   font-family: "georgia", serif;
   font-weight: 400;
-  color: #9A9A9A;
+  color: #8a8a8a;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
+.m-post-list__third .m-post-list__author {
+  display: none;
 }
 .m-post-list__title {
   padding-top: 0;
@@ -743,11 +765,17 @@ h6 {
   font-size: 15px;
   height: 3.6rem;
   overflow: hidden;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
 }
 .m-post-list__full .m-post-list__title {
   overflow: auto;
   height: auto;
   margin-bottom: 0.25rem;
+}
+.m-post-list__third .m-post-list__title {
+  overflow: auto;
+  height: auto;
 }
 
 /* Theming */
