@@ -17,6 +17,7 @@
 .o-button {
   display: inline-block;
   padding: 0.2rem 1.5rem;
+  margin-right: 0.2rem;
 
   background: color(dark-blue);
   border-radius: 2px;
@@ -39,10 +40,21 @@
   }
 }
 
+.o-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  &__alternate {
+    font-weight: 500;
+    color: color(gray);
+  }
+}
+
 /* Modules */
 @import "header";
 @import "post";
 @import "post-list";
+@import "footer";
+@import "related-posts";
 
 /* Theming */
 

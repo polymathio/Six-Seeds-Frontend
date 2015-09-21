@@ -536,6 +536,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 16px;
+  letter-spacing: 0.01em;
   color: #3a3a3a;
   line-height: 1.1em;
   font-family: "helvetica", sans-serif;
@@ -587,6 +588,7 @@ h6 {
 .o-button {
   display: inline-block;
   padding: 0.2rem 1.5rem;
+  margin-right: 0.2rem;
   background: #275D74;
   border-radius: 2px;
   color: #FEFEFE;
@@ -603,6 +605,15 @@ h6 {
 .o-button--full {
   display: block;
   text-align: center;
+}
+
+.o-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.o-title__alternate {
+  font-weight: 500;
+  color: #8a8a8a;
 }
 
 /* Modules */
@@ -670,6 +681,7 @@ h6 {
 .m-header__links li {
   display: inline-block;
   margin: 0;
+  margin-right: -4px;
   padding: 0;
 }
 
@@ -699,7 +711,7 @@ h6 {
 }
 .m-post-list__basic, .m-post-list__full, .m-post-list__third {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   position: relative;
   font-size: 14px;
 }
@@ -761,9 +773,9 @@ h6 {
 }
 .m-post-list__title {
   padding-top: 0;
-  margin-bottom: 0rem;
+  margin-bottom: 0.25rem;
   font-size: 15px;
-  height: 3.6rem;
+  height: 3rem;
   overflow: hidden;
   -webkit-transition: 0.1s;
           transition: 0.1s;
@@ -776,6 +788,57 @@ h6 {
 .m-post-list__third .m-post-list__title {
   overflow: auto;
   height: auto;
+}
+
+.m-footer {
+  margin-top: 1rem;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  background: #69B6D6;
+  background: -webkit-linear-gradient(top, #69B6D6 25%, #275D74 200%);
+  background: linear-gradient(to bottom, #69B6D6 25%, #275D74 200%);
+}
+
+.m-related-posts {
+  padding-right: 336px;
+  -webkit-transform: translate(0, -33%);
+      -ms-transform: translate(0, -33%);
+          transform: translate(0, -33%);
+}
+.m-related-posts__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -1rem;
+  padding-top: 1rem;
+}
+.m-related-posts__list li {
+  display: inline-block;
+  margin-right: -4px;
+  width: 33.33%;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.m-related-posts__list a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  height: 12rem;
+}
+.m-related-posts__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+}
+.m-related-posts__title {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 /* Theming */

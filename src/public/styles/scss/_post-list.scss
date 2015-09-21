@@ -5,7 +5,7 @@
   
   &__basic, &__full, &__third {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
     font-size: 14px;
 
@@ -71,9 +71,9 @@
 
   &__title {
     padding-top: 0;
-    margin-bottom: 0rem;
+    margin-bottom: 0.25rem;
     font-size: 15px;
-    height: 3.6rem;
+    height: 3rem;
 
     overflow: hidden;
     //text-overflow: ellipsis;

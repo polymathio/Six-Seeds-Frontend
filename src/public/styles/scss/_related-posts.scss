@@ -1,0 +1,46 @@
+.m-related-posts {
+	padding-right: 336px;
+	transform: translate(0, -33%);
+
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		margin-left: -1rem;
+		padding-top: 1rem;
+
+		li {
+			display: inline-block;
+			margin-right: -4px;
+			width: 33.33%;
+			
+			padding-left: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			overflow: hidden;
+			height: 12rem;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__title {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+	}
+}
