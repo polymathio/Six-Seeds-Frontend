@@ -24,6 +24,10 @@
   @return map-get($color-map, $c);
 }
 
+@function break($size) {
+  @return map-get($breakpoints, $size);
+}
+
 @mixin font($family, $size, $weight) {
   font:{
     family: $family;

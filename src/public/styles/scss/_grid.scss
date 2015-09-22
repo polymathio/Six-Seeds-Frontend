@@ -31,7 +31,26 @@ $cols: 12;
     .#{$grid-column-namespace}--push-#{$i} {
       margin-left: $width + 0%;
     }
+    
+    @media screen and (max-width: break(l)) {
+      .#{$grid-column-namespace}--l-#{$i} {
+        width: $width + 0%;
+      }  
+    }
+
+    @media screen and (max-width: break(m)) {
+      .#{$grid-column-namespace}--m-#{$i} {
+        width: $width + 0%;
+      }  
+    }
+
+    @media screen and (max-width: break(s)) {
+      .#{$grid-column-namespace}--s-#{$i} {
+        width: $width + 0%;
+      }  
+    }
   }
+
 
   .#{$grid-column-namespace}--centered {
     display: block;

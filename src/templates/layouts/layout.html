@@ -14,12 +14,11 @@
     <![endif]-->
 
   </head>
-  <body class="{% block bodyClass %}{% endblock %}">
+  <body class="{% block bodyClass %}{% endblock %}">  
+
+    {% block content %}{% endblock %}
 
     {% include "includes/navigation.html" %}
-    
-    
-    {% block content %}{% endblock %}
     
     <script type="text/javascript" src="public/scripts/scripts.min.js"></script>
   </body>

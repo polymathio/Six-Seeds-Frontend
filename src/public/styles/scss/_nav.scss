@@ -1,0 +1,45 @@
+.m-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	height: 4rem;
+
+	&__list {
+		list-style-type: none;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			height: 100%;
+
+			& > a {
+				display: block;
+				padding: 0 0.7rem;
+				
+				line-height: 4rem;
+				text-decoration: none;
+				font-family: $helvetica;
+				font-size: 14px;
+				font-weight: 600;
+				color: color(white);
+			}
+		}
+
+	}
+
+	&__list--left {
+		float: left;
+	}
+
+	&__list--right {
+		float: right;
+	}
+
+	.o-container {
+		height: 100%;
+	}
+}

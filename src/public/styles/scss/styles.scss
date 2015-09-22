@@ -9,8 +9,8 @@
 
 /* Objects */
 .o-container {
-  width: 90%;
-  max-width: 960px;
+  width: 88%;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -50,6 +50,7 @@
 }
 
 /* Modules */
+@import "nav";
 @import "header";
 @import "post";
 @import "post-list";
@@ -59,6 +60,7 @@
 /* Theming */
 
 /* Utility & Helpers */
+@import "helpers";
 
 
 /*  */

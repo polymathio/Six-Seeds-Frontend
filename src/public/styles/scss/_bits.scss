@@ -10,3 +10,11 @@ $color-map: (
   gold:       #DEBE3A,
   gray:       #8a8a8a
 );
+
+
+$breakpoints: (
+  xl: 1200px,
+  l:  992px,
+  m:  768px,
+  s:  640px 
+);
