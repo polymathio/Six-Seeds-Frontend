@@ -413,6 +413,10 @@ pre, table, fieldset, hr {
   margin-bottom: 16px;
 }
 
+html {
+  background-color: #FEFEFE;
+}
+
 .grid {
   margin-left: -20px;
   text-align: left;
@@ -759,6 +763,7 @@ h6 {
 }
 
 /* Objects */
+/* TODO - move objects out of this file */
 .o-container {
   width: 88%;
   max-width: 900px;
@@ -902,61 +907,61 @@ h6 {
   padding: 0;
 }
 
-.m-post {
+.m-page {
   position: relative;
   display: table;
 }
-.m-post__content {
+.m-page__content {
   display: table-cell;
   width: 100%;
   padding-right: 2rem;
   padding-bottom: 14rem;
 }
-.m-post__sidebar {
+.m-page__sidebar {
   min-width: 300px;
   display: table-cell;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
 }
-.m-post__sidebar > * {
+.m-page__sidebar > * {
   margin-bottom: 1rem;
 }
 
-.m-post-list {
+.m-list {
   list-style-type: none;
   margin-left: 0;
   padding: 0;
 }
-.m-post-list__basic, .m-post-list__full, .m-post-list__third {
+.m-list__basic, .m-list__full, .m-list__third {
   display: block;
   margin-bottom: 1.5rem;
   position: relative;
   font-size: 14px;
 }
-.m-post-list__basic:before, .m-post-list__basic:after, .m-post-list__full:before, .m-post-list__full:after, .m-post-list__third:before, .m-post-list__third:after {
+.m-list__basic:before, .m-list__basic:after, .m-list__full:before, .m-list__full:after, .m-list__third:before, .m-list__third:after {
   content: "";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.m-post-list__basic:after, .m-post-list__full:after, .m-post-list__third:after {
+.m-list__basic:after, .m-list__full:after, .m-list__third:after {
   clear: both;
 }
-.m-post-list__basic a, .m-post-list__full a, .m-post-list__third a {
+.m-list__basic a, .m-list__full a, .m-list__third a {
   text-decoration: none;
 }
-.m-post-list__basic a:hover .m-post-list__title, .m-post-list__basic a:hover .m-post-list__author, .m-post-list__basic a:active .m-post-list__title, .m-post-list__basic a:active .m-post-list__author, .m-post-list__basic a:focus .m-post-list__title, .m-post-list__basic a:focus .m-post-list__author, .m-post-list__full a:hover .m-post-list__title, .m-post-list__full a:hover .m-post-list__author, .m-post-list__full a:active .m-post-list__title, .m-post-list__full a:active .m-post-list__author, .m-post-list__full a:focus .m-post-list__title, .m-post-list__full a:focus .m-post-list__author, .m-post-list__third a:hover .m-post-list__title, .m-post-list__third a:hover .m-post-list__author, .m-post-list__third a:active .m-post-list__title, .m-post-list__third a:active .m-post-list__author, .m-post-list__third a:focus .m-post-list__title, .m-post-list__third a:focus .m-post-list__author {
+.m-list__basic a:hover .m-post-list__title, .m-list__basic a:hover .m-post-list__author, .m-list__basic a:active .m-post-list__title, .m-list__basic a:active .m-post-list__author, .m-list__basic a:focus .m-post-list__title, .m-list__basic a:focus .m-post-list__author, .m-list__full a:hover .m-post-list__title, .m-list__full a:hover .m-post-list__author, .m-list__full a:active .m-post-list__title, .m-list__full a:active .m-post-list__author, .m-list__full a:focus .m-post-list__title, .m-list__full a:focus .m-post-list__author, .m-list__third a:hover .m-post-list__title, .m-list__third a:hover .m-post-list__author, .m-list__third a:active .m-post-list__title, .m-list__third a:active .m-post-list__author, .m-list__third a:focus .m-post-list__title, .m-list__third a:focus .m-post-list__author {
   color: #69B6D6;
 }
-.m-post-list__third {
+.m-list__third {
   display: inline-block;
   width: 30%;
   margin-left: 4.99%;
   margin-right: -4px;
 }
-.m-post-list__third:first-child {
+.m-list__third:first-child {
   margin-left: 0;
 }
-.m-post-list__image {
+.m-list__image {
   float: left;
   width: 5rem;
   height: 5rem;
@@ -964,18 +969,18 @@ h6 {
   background-position: center;
   background-size: cover;
 }
-.m-post-list__full .m-post-list__image {
+.m-post-list__full .m-list__image {
   float: none;
   width: 100%;
   height: 6rem;
   margin-bottom: 0.5rem;
 }
-.m-post-list__third .m-post-list__image {
+.m-post-list__third .m-list__image {
   float: none;
   width: 100%;
   margin-bottom: 0.5rem;
 }
-.m-post-list__author {
+.m-list__author {
   padding-top: 0.25rem;
   margin: 0;
   font-size: 13px;
@@ -985,10 +990,10 @@ h6 {
   -webkit-transition: 0.1s;
           transition: 0.1s;
 }
-.m-post-list__third .m-post-list__author {
+.m-post-list__third .m-list__author {
   display: none;
 }
-.m-post-list__title {
+.m-list__title {
   padding-top: 0;
   margin-bottom: 0.25rem;
   font-size: 15px;
@@ -997,12 +1002,12 @@ h6 {
   -webkit-transition: 0.1s;
           transition: 0.1s;
 }
-.m-post-list__full .m-post-list__title {
+.m-post-list__full .m-list__title {
   overflow: auto;
   height: auto;
   margin-bottom: 0.25rem;
 }
-.m-post-list__third .m-post-list__title {
+.m-post-list__third .m-list__title {
   overflow: auto;
   height: auto;
 }
@@ -1076,6 +1081,7 @@ h6 {
 }
 
 /* Theming */
+/* Theming styles go here */
 /* Utility & Helpers */
 /* X Large only */
 @media screen and (max-width: 1200px) and (min-width: 992px) {
@@ -1150,6 +1156,3 @@ h6 {
   }
 }
 /*  */
-html {
-  background-color: #FEFEFE;
-}

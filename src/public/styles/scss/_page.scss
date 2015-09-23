@@ -1,4 +1,4 @@
-.m-post {
+.m-page {
   position: relative;
   display: table;
 
@@ -12,7 +12,7 @@
   &__sidebar {
     min-width: 300px;
     display: table-cell;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 
     & > * {
       margin-bottom: 1rem;

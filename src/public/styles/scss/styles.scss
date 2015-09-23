@@ -1,13 +1,14 @@
 @import "normalize";
 
 /* Base Styles */
-@import "bits";
-@import "functions";
-@import "base";
+@import "bits";       // Includes color vars, media query breakpoints, and baseline vars
+@import "functions";  // Various Sass functions
+@import "base";       
 @import "grid";
 @import "typography";
 
 /* Objects */
+/* TODO - move objects out of this file */
 .o-container {
   width: 88%;
   max-width: 900px;
@@ -50,23 +51,22 @@
 }
 
 /* Modules */
-@import "nav";
-@import "header";
-@import "post";
-@import "post-list";
-@import "footer";
-@import "related-posts";
+@import "nav";            // Main top navigation
+@import "header";         // Main Hero
+@import "page";           // Standard Content-Sidebar layout
+@import "lists";          // Sidebar list and item styles
+@import "footer";         // Footer that appears in single post
+@import "related-posts";  // Related posts section in footer
 
 /* Theming */
+/* Theming styles go here */
 
 /* Utility & Helpers */
 @import "helpers";
 
 
 /*  */
-html {
-  background-color: color(white);
-}
+
 
 
 
