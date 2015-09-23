@@ -2,15 +2,16 @@
 	position: relative;
 	margin-top: 1rem;
   margin-bottom: 1rem;
-	padding-top: 0rem;
+	padding-top: 2rem;
 	padding-bottom: 2rem;
 
 	background: color(blue);
-  background: linear-gradient(to bottom, color(blue) 25%, color(dark-blue) 200%);
+  background: linear-gradient(to bottom, color(dark-blue) 25%, color(dark-blue) 200%);
+  background: #eee;
 
   &:before, &:after {
-  	display: block;
-  	content: "";
+  	//display: block;
+  	//content: "";
   	position: absolute;
 	  left: 0;
     right: 0;
@@ -29,10 +30,10 @@
   
   .o-container {
     position: relative;
-    top: -10rem; 
+    //top: -10rem; 
 
     & > *:last-child {
-      margin-bottom: -9rem;
+      //margin-bottom: -9rem;
     }
   }
 }
