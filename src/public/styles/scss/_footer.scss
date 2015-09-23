@@ -1,7 +1,7 @@
 .m-footer {
 	position: relative;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 	padding-top: 0rem;
 	padding-bottom: 2rem;
 
@@ -16,7 +16,7 @@
     right: 0;
     height: 0.4rem;
 
-    background: color(dark-blue);
+    background: lighten(color(dark-blue), 4);
   }
 
   &:before {
@@ -25,5 +25,14 @@
 
   &:after {
   	top: 100%;
+  }
+  
+  .o-container {
+    position: relative;
+    top: -10rem; 
+
+    & > *:last-child {
+      margin-bottom: -9rem;
+    }
   }
 }

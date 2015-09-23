@@ -1,6 +1,7 @@
 .m-related-posts {
 	padding-right: 336px;
-	transform: translate(0, -33%);
+	margin-bottom: 2rem;
+	
 
 	&__list {
 		list-style-type: none;
@@ -42,5 +43,6 @@
 		position: absolute;
 		top: 1rem;
 		left: 1rem;
+		right: 1rem;
 	}
 }

@@ -15,7 +15,7 @@
       text-decoration: none;
 
       &:hover, &:active, &:focus {
-        .m-post-list__title, .m-post-list__author {
+        .m-list__title, .m-list__author {
           color: color(blue);
         }
       }
@@ -40,14 +40,14 @@
     background-position: center;
     background-size: cover;
 
-    .m-post-list__full & {
+    .m-list__full & {
       float: none;
       width: 100%;
       height: 6rem;
       margin-bottom: 0.5rem;
     }
 
-    .m-post-list__third & {
+    .m-list__third & {
       float: none;
       width: 100%;
       margin-bottom: 0.5rem;
@@ -64,7 +64,7 @@
     color: color(gray);
     transition: 0.1s;
 
-    .m-post-list__third & {
+    .m-list__third & {
       display: none;
     }
   }
@@ -80,13 +80,13 @@
 
     transition: 0.1s;
 
-    .m-post-list__full & {
+    .m-list__full & {
       overflow: auto;
       height: auto;
       margin-bottom: 0.25rem;
     }
 
-    .m-post-list__third & {
+    .m-list__third & {
       overflow: auto;
       height: auto;
     }

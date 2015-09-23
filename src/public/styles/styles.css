@@ -1,3 +1,4 @@
+/* Vendor */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 *,
 *:after,
@@ -763,7 +764,6 @@ h6 {
 }
 
 /* Objects */
-/* TODO - move objects out of this file */
 .o-container {
   width: 88%;
   max-width: 900px;
@@ -799,6 +799,26 @@ h6 {
 .o-title__alternate {
   font-weight: 500;
   color: #8a8a8a;
+}
+.o-title--light .o-title__alternate {
+  color: #fefefe;
+}
+.o-title a {
+  font-weight: 600;
+  -webkit-transition: 0.1s;
+          transition: 0.1s;
+}
+.o-title a:hover, .o-title a:active, .o-title a:focus {
+  color: #DEBE3A;
+}
+.o-title--light {
+  color: #FEFEFE;
+}
+.o-title--light a {
+  color: #FEFEFE;
+}
+.o-title--light a:hover, .o-title--light a:active, .o-title--light a:focus {
+  color: #183846;
 }
 
 /* Modules */
@@ -913,6 +933,7 @@ h6 {
 }
 .m-page__content {
   display: table-cell;
+  vertical-align: top;
   width: 100%;
   padding-right: 2rem;
   padding-bottom: 14rem;
@@ -920,6 +941,7 @@ h6 {
 .m-page__sidebar {
   min-width: 300px;
   display: table-cell;
+  vertical-align: top;
   padding-bottom: 8rem;
 }
 .m-page__sidebar > * {
@@ -949,7 +971,7 @@ h6 {
 .m-list__basic a, .m-list__full a, .m-list__third a {
   text-decoration: none;
 }
-.m-list__basic a:hover .m-post-list__title, .m-list__basic a:hover .m-post-list__author, .m-list__basic a:active .m-post-list__title, .m-list__basic a:active .m-post-list__author, .m-list__basic a:focus .m-post-list__title, .m-list__basic a:focus .m-post-list__author, .m-list__full a:hover .m-post-list__title, .m-list__full a:hover .m-post-list__author, .m-list__full a:active .m-post-list__title, .m-list__full a:active .m-post-list__author, .m-list__full a:focus .m-post-list__title, .m-list__full a:focus .m-post-list__author, .m-list__third a:hover .m-post-list__title, .m-list__third a:hover .m-post-list__author, .m-list__third a:active .m-post-list__title, .m-list__third a:active .m-post-list__author, .m-list__third a:focus .m-post-list__title, .m-list__third a:focus .m-post-list__author {
+.m-list__basic a:hover .m-list__title, .m-list__basic a:hover .m-list__author, .m-list__basic a:active .m-list__title, .m-list__basic a:active .m-list__author, .m-list__basic a:focus .m-list__title, .m-list__basic a:focus .m-list__author, .m-list__full a:hover .m-list__title, .m-list__full a:hover .m-list__author, .m-list__full a:active .m-list__title, .m-list__full a:active .m-list__author, .m-list__full a:focus .m-list__title, .m-list__full a:focus .m-list__author, .m-list__third a:hover .m-list__title, .m-list__third a:hover .m-list__author, .m-list__third a:active .m-list__title, .m-list__third a:active .m-list__author, .m-list__third a:focus .m-list__title, .m-list__third a:focus .m-list__author {
   color: #69B6D6;
 }
 .m-list__third {
@@ -969,13 +991,13 @@ h6 {
   background-position: center;
   background-size: cover;
 }
-.m-post-list__full .m-list__image {
+.m-list__full .m-list__image {
   float: none;
   width: 100%;
   height: 6rem;
   margin-bottom: 0.5rem;
 }
-.m-post-list__third .m-list__image {
+.m-list__third .m-list__image {
   float: none;
   width: 100%;
   margin-bottom: 0.5rem;
@@ -990,7 +1012,7 @@ h6 {
   -webkit-transition: 0.1s;
           transition: 0.1s;
 }
-.m-post-list__third .m-list__author {
+.m-list__third .m-list__author {
   display: none;
 }
 .m-list__title {
@@ -1002,12 +1024,12 @@ h6 {
   -webkit-transition: 0.1s;
           transition: 0.1s;
 }
-.m-post-list__full .m-list__title {
+.m-list__full .m-list__title {
   overflow: auto;
   height: auto;
   margin-bottom: 0.25rem;
 }
-.m-post-list__third .m-list__title {
+.m-list__third .m-list__title {
   overflow: auto;
   height: auto;
 }
@@ -1029,7 +1051,7 @@ h6 {
   left: 0;
   right: 0;
   height: 0.4rem;
-  background: #275D74;
+  background: #2c6983;
 }
 .m-footer:before {
   top: 0;
@@ -1037,12 +1059,17 @@ h6 {
 .m-footer:after {
   top: 100%;
 }
+.m-footer .o-container {
+  position: relative;
+  top: -10rem;
+}
+.m-footer .o-container > *:last-child {
+  margin-bottom: -9rem;
+}
 
 .m-related-posts {
   padding-right: 336px;
-  -webkit-transform: translate(0, -33%);
-      -ms-transform: translate(0, -33%);
-          transform: translate(0, -33%);
+  margin-bottom: 2rem;
 }
 .m-related-posts__list {
   list-style-type: none;
@@ -1078,6 +1105,36 @@ h6 {
   position: absolute;
   top: 1rem;
   left: 1rem;
+  right: 1rem;
+}
+
+.ad__300x250, .ad__160x600, .ad__728x90 {
+  display: inline-block;
+  margin: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.ad {
+  display: block;
+  text-align: center;
+  line-height: 0;
+}
+.ad__300x250 {
+  width: 300px;
+  height: 250px;
+}
+.ad__160x600 {
+  width: 160px;
+  height: 600px;
+}
+.ad__728x90 {
+  width: 728px;
+  height: 90px;
+}
+.ad--fixed {
+  position: absolute;
+  left: 1rem;
+  top: 29rem;
 }
 
 /* Theming */
