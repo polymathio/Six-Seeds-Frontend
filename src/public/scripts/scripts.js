@@ -17,6 +17,7 @@ var modal = {
 	cacheDom: function() {
 		this.$openTriggers = $('.js-open-modal');
 		this.$closeTriggers = $('.js-close-modal');
+		this.$copyTriggers = $('.js-copy-url');
 	},
 
 	bindEvents: function() {
@@ -24,7 +25,7 @@ var modal = {
 			e.preventDefault();
 			var target = $(this).data('target'), type = $(this).data('type');
 
-			var $targetModal = $('#modal-' + target);
+			var $targetModal = $('#modal-' + type);
 			$targetModal.addClass('is-visible');
 
 		});
@@ -32,6 +33,19 @@ var modal = {
 		this.$closeTriggers.on('click', function(e) {
 			e.preventDefault();
 			$(this).closest('.m-modal').removeClass('is-visible');
+		});
+
+		this.$copyTriggers.on('click', function(e) {
+			e.preventDefault();
+			$(this).siblings('.js-page-url').focus().select();
+			document.execCommand("copy");
+			
+			var $copied = $(this).find('.m-modal__copied');
+			$copied.addClass('is-visible');
+
+			window.setTimeout(function(){
+				$copied.removeClass('is-visible');
+			}, 5000);
 		});
 	}
 }
@@ -55,6 +69,7 @@ var comments = {
 			e.preventDefault();
 			var target = $(this).data('target');
 			$('#comments-' + target).addClass('is-visible');
+			$(this).remove();
 		});
 	}
 }

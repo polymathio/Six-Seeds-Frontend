@@ -1,16 +1,15 @@
 .o-container {
   width: 88%;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .o-button {
   display: inline-block;
-  padding: 0.2rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   margin-right: 0.2rem;
 
   background: color(dark-blue);
-  border-radius: 2px;
   color: color(white);
 
   font-size: 14px;
@@ -21,7 +20,8 @@
   transition: 0.1s;
 
   &:hover , &:active, &:focus {
-    background: lighten(color(gold), 0);
+    background: lighten(color(blue), 0);
+    color: color(white);
   }
 
   &--full {
@@ -49,7 +49,7 @@
     color: darken(color(dark-blue), 12);
 
     &:hover, &:active, &:focus {
-      color: color(gold);
+      color: color(blue);
     } 
   }
 

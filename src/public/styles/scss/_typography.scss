@@ -49,3 +49,11 @@ $headers: (h1: 48, h2: 40, h3: 32, h4: 28, h5: 22, h6: 16);
     @include font-size($size);
   }
 }
+
+a {
+  color: color(dark-blue);
+  transition: 0.15s;
+  &:hover, &:active, &:focus {
+    color: color(blue);
+  }
+}
