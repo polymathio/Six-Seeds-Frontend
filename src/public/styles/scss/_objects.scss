@@ -46,6 +46,7 @@
   a {
     font-weight: 600;
     transition: 0.1s;
+    color: darken(color(dark-blue), 12);
 
     &:hover, &:active, &:focus {
       color: color(gold);

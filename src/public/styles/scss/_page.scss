@@ -7,14 +7,14 @@
     vertical-align: top;
     width: 100%;
     padding-right: 2rem;
-    padding-bottom: 0rem;
+    padding-bottom: 1rem;
   }
 
   &__sidebar {
     min-width: 300px;
     display: table-cell;
     vertical-align: top;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
 
     & > * {
       margin-bottom: 1rem;

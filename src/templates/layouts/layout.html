@@ -18,7 +18,10 @@
 
     {% block content %}{% endblock %}
 
+    
+    <!-- Keep fixed overlay stuff at bottom to avoid z-indexing -->
     <!-- {% include "includes/navigation.html" %} -->
+    {% include "includes/modal.html" %}
     
     <script type="text/javascript" src="public/scripts/scripts.min.js"></script>
   </body>

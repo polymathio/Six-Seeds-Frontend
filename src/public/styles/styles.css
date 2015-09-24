@@ -1,3 +1,13 @@
+/*
+ _______  _______  ___      __   __  __   __  _______  _______  __   __ 
+|       ||       ||   |    |  | |  ||  |_|  ||   _   ||       ||  | |  |
+|    _  ||   _   ||   |    |  |_|  ||       ||  |_|  ||_     _||  |_|  |
+|   |_| ||  | |  ||   |    |       ||       ||       |  |   |  |       |
+|    ___||  |_|  ||   |___ |_     _||       ||       |  |   |  |       |
+|   |    |       ||       |  |   |  | ||_|| ||   _   |  |   |  |   _   |
+|___|    |_______||_______|  |___|  |_|   |_||__| |__|  |___|  |__| |__|
+
+*/
 /* Vendor */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 *,
@@ -807,6 +817,7 @@ h6 {
   font-weight: 600;
   -webkit-transition: 0.1s;
           transition: 0.1s;
+  color: #183846;
 }
 .o-title a:hover, .o-title a:active, .o-title a:focus {
   color: #DEBE3A;
@@ -936,13 +947,13 @@ h6 {
   vertical-align: top;
   width: 100%;
   padding-right: 2rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
 }
 .m-page__sidebar {
   min-width: 300px;
   display: table-cell;
   vertical-align: top;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 .m-page__sidebar > * {
   margin-bottom: 1rem;
@@ -1036,21 +1047,25 @@ h6 {
 
 .m-footer {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0rem;
   margin-bottom: 1rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: #69B6D6;
   background: -webkit-linear-gradient(top, #275D74 25%, #275D74 200%);
   background: linear-gradient(to bottom, #275D74 25%, #275D74 200%);
-  background: #eee;
+  background: rgba(223, 231, 235, 0.5);
+  /* &:before,  */
 }
-.m-footer:before, .m-footer:after {
+.m-footer:after {
+  display: block;
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 0.4rem;
   background: #2c6983;
+  background: #dfe7eb;
 }
 .m-footer:before {
   top: 0;
@@ -1103,6 +1118,13 @@ h6 {
   right: 1rem;
 }
 
+.m-disqus {
+  display: none;
+}
+.m-disqus.is-visible {
+  display: block;
+}
+
 .ad__300x250, .ad__160x600, .ad__728x90 {
   display: inline-block;
   margin: 0.5rem 0;
@@ -1130,6 +1152,45 @@ h6 {
   position: absolute;
   left: 1rem;
   top: 29rem;
+}
+
+.m-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.m-modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.m-modal__container {
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh auto;
+  -webkit-transition: 0.2s ease-out;
+          transition: 0.2s ease-out;
+  text-align: center;
+}
+.is-visible .m-modal__container {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.m-modal__container > * {
+  color: #FEFEFE;
+}
+.m-modal__close {
+  float: right;
+  color: #FEFEFE;
+  font-size: 18px;
+  font-family: "helvetica", sans-serif;
 }
 
 /* Theming */

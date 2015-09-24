@@ -1,23 +1,24 @@
 .m-footer {
 	position: relative;
-	margin-top: 1rem;
+	margin-top: 0rem;
   margin-bottom: 1rem;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
 	background: color(blue);
   background: linear-gradient(to bottom, color(dark-blue) 25%, color(dark-blue) 200%);
-  background: #eee;
+  background: rgba(color(light-blue), 0.5);
 
-  &:before, &:after {
-  	//display: block;
-  	//content: "";
+  /* &:before,  */&:after {
+  	display: block;
+  	content: "";
   	position: absolute;
 	  left: 0;
     right: 0;
     height: 0.4rem;
 
     background: lighten(color(dark-blue), 4);
+    background: rgba(color(light-blue), 1);
   }
 
   &:before {
