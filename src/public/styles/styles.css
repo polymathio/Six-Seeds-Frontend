@@ -1191,29 +1191,38 @@ a:hover, a:active, a:focus {
   background: rgba(255, 255, 255, 0.85);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: 0.3s;
-          transition: 0.3s;
+  -webkit-transition: opacity 0.3s;
+          transition: opacity 0.3s;
 }
 .m-modal.is-visible {
   visibility: visible;
   opacity: 1;
 }
 .m-modal__container {
-  width: 80vw;
-  height: 80vh;
-  margin: 10vh auto;
-  padding-top: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  padding-top: 4rem;
   -webkit-transition: 0.2s ease-out;
           transition: 0.2s ease-out;
   text-align: center;
 }
-.is-visible .m-modal__container {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+@media screen and (max-width: 768px) {
+  .m-modal__container {
+    width: 95%;
+  }
 }
 .m-modal__title {
   color: #275D74;
+}
+@media screen and (max-width: 768px) {
+  .m-modal__title {
+    font-size: 26px;
+  }
 }
 .m-modal__close {
   position: absolute;
@@ -1243,6 +1252,13 @@ a:hover, a:active, a:focus {
 }
 .m-modal__list li a:hover, .m-modal__list li a:active, .m-modal__list li a:focus {
   color: #69B6D6;
+}
+@media screen and (max-width: 768px) {
+  .m-modal__list li a {
+    font-size: 14px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
 }
 .m-modal__fieldset {
   border: none;
