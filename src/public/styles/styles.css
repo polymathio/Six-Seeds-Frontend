@@ -793,6 +793,7 @@ a:hover, a:active, a:focus {
   display: inline-block;
   padding: 0.3rem 1.5rem;
   margin-right: 0.2rem;
+  margin-bottom: 1rem;
   background: #275D74;
   color: #FEFEFE;
   font-size: 14px;
@@ -1227,13 +1228,13 @@ a:hover, a:active, a:focus {
 .m-modal__close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10vw;
   color: #275D74;
   font-size: 18px;
   font-family: "helvetica", sans-serif;
 }
 .m-modal__list {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   padding: 0;
   list-style-type: none;
 }
@@ -1242,22 +1243,52 @@ a:hover, a:active, a:focus {
 }
 .m-modal__list li a {
   display: block;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1rem;
-  color: #275D74;
-  font-family: "helvetica", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
   text-decoration: none;
 }
-.m-modal__list li a:hover, .m-modal__list li a:active, .m-modal__list li a:focus {
+.m-modal__list li a:hover h6, .m-modal__list li a:active h6, .m-modal__list li a:focus h6 {
   color: #69B6D6;
+}
+.m-modal__list li a:hover .m-modal__icon, .m-modal__list li a:active .m-modal__icon, .m-modal__list li a:focus .m-modal__icon {
+  background: #69B6D6;
 }
 @media screen and (max-width: 768px) {
   .m-modal__list li a {
+    margin: 0.4rem;
+  }
+}
+.m-modal__list li h6 {
+  color: #275D74;
+  font-weight: 600;
+  font-size: 20px;
+  -webkit-transition: 0.15s;
+          transition: 0.15s;
+}
+@media screen and (max-width: 768px) {
+  .m-modal__list li h6 {
     font-size: 14px;
-    margin: 0.5rem;
-    padding: 0.5rem;
+  }
+}
+.m-modal__icon {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background: #275D74;
+  -webkit-transition: 0.15s;
+          transition: 0.15s;
+}
+.m-modal__icon img {
+  display: block;
+  width: 64px;
+}
+@media screen and (max-width: 992px) {
+  .m-modal__icon img {
+    width: 52px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .m-modal__icon img {
+    width: 32px;
   }
 }
 .m-modal__fieldset {
