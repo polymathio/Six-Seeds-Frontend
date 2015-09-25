@@ -8,6 +8,10 @@
     width: 100%;
     padding-right: 2rem;
     padding-bottom: 1rem;
+    
+    @media screen and (max-width: break(m)) {
+      padding-right: 0;
+   }
   }
 
   &__sidebar {

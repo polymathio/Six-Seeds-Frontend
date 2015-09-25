@@ -27,7 +27,6 @@ var modal = {
 
 			var $targetModal = $('#modal-' + type);
 			$targetModal.addClass('is-visible');
-
 		});
 
 		this.$closeTriggers.on('click', function(e) {

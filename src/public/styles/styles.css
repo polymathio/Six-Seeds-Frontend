@@ -784,7 +784,7 @@ a:hover, a:active, a:focus {
 
 /* Objects */
 .o-container {
-  width: 88%;
+  width: 92%;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -958,6 +958,11 @@ a:hover, a:active, a:focus {
   width: 100%;
   padding-right: 2rem;
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .m-page__content {
+    padding-right: 0;
+  }
 }
 .m-page__sidebar {
   min-width: 300px;
@@ -1203,14 +1208,19 @@ a:hover, a:active, a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -53%);
+      -ms-transform: translate(-50%, -53%);
+          transform: translate(-50%, -53%);
   width: 90%;
   padding-top: 4rem;
   -webkit-transition: 0.2s ease-out;
           transition: 0.2s ease-out;
   text-align: center;
+}
+.is-visible .m-modal__container {
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 768px) {
   .m-modal__container {
@@ -1229,9 +1239,35 @@ a:hover, a:active, a:focus {
   position: absolute;
   top: 0;
   right: 10vw;
-  color: #275D74;
-  font-size: 18px;
-  font-family: "helvetica", sans-serif;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+}
+.m-modal__close:before, .m-modal__close:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 48%;
+  height: 6px;
+  width: 100%;
+  background: #275D74;
+  border-radius: 1px;
+  -webkit-transition: 0.15s;
+          transition: 0.15s;
+}
+.m-modal__close:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.m-modal__close:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.m-modal__close:hover:before, .m-modal__close:hover:after {
+  background: #69B6D6;
 }
 .m-modal__list {
   margin: 2rem 0 1rem;
@@ -1259,6 +1295,8 @@ a:hover, a:active, a:focus {
   }
 }
 .m-modal__list li h6 {
+  padding: 0;
+  margin: 0;
   color: #275D74;
   font-weight: 600;
   font-size: 20px;
