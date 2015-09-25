@@ -12,6 +12,7 @@ var gulp            = require('gulp'),
     rename          = require('gulp-rename'),
     nunjucksRender  = require('gulp-nunjucks-render'),
     notify          = require("gulp-notify"),
+    browserify      = require('gulp-browserify'),
     reload          = browserSync.reload;
 
 var src = {
@@ -42,11 +43,12 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('scripts', function(){
-  gulp.src(src.js)
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(concat('scripts.min.js'))
-    .pipe(gulp.dest('./dist/public/scripts/'));
+  return gulp.src(['./src/public/scripts/scripts.js'])
+     .pipe(browserify())
+     .pipe(gulp.dest('./dist/public/scripts/'))
+     .pipe(uglify())
+     .pipe(rename({suffix: '.min' }))
+     .pipe(gulp.dest('./dist/public/scripts/'));
 });
 
 gulp.task('sass', function() {
