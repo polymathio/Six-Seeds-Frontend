@@ -1,15 +1,155 @@
 {% extends "layouts/layout.html" %}
 
 {% block title %}Batter — Index {% endblock %}
-{% block bodyClass %}home{% endblock %}
+{% block bodyClass %}blog{% endblock %}
 
 {% block content %}
+
+<article>
   
-  
-  <div class="c-header">
-    <div class="o-container">
-      <h1>Index</h1>  
-    </div>
+  <div class="ad">
+    <div class="ad__728x90"></div>  
   </div>
+
+  <header class="m-header">
+    <div class="m-header__background"></div>
+
+    <div class="o-container">
+      <div class="grid">
+        <div class="col-8">
+          <h1 class="m-header__title">Blog Title</h1>
+          <h6 class="m-header__subtitle">Blog Subtitle</h6> 
+        </div>
+      </div>
+    </div>
+
+    <ul class="m-header__links">
+      <div class="o-container">
+        <li><a href="" class="o-button js-open-modal" data-target="tempPostID" data-type="follow">Follow Author</a></li>
+        <li><a href="" class="o-button js-open-modal" data-target="tempPostID" data-type="share">Share This</a></li>
+      </div>
+    </ul>
+  </header>
   
+  <div class="o-container">
+    <div class="ad--fixed ad__160x600 hide--s hide--m hide--l">
+    </div>
+
+    <div class="m-page">
+      <div class="m-page__content">
+
+      	<!-- Post Link -->
+				<div class="m-post-link">
+					<a href="post.html" class="m-post-link__image" style="background-image:url('public/images/placeholder.jpg')"></a>
+					<a href="post.html" class="m-post-link__title"><h4>Lorem ipsum dolor sit.</h4></a>
+					<p class="m-post-link__meta">September 1, 2015</p>
+					<p class="m-post-link__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe enim beatae nostrum magnam sequi, dolorum mollitia. Illum consectetur suscipit, labore!</p>
+					<a href="post.html" class="m-post-link__read-more">Read More</a>
+				</div>
+
+				<div class="m-post-link">
+					<a href="post.html" class="m-post-link__image" style="background-image:url('public/images/placeholder2.jpg')"></a>
+					<a href="post.html" class="m-post-link__title"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore.</h4></a>
+					<p class="m-post-link__meta">September 1, 2015</p>
+					<p class="m-post-link__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe enim beatae nostrum magnam sequi, dolorum mollitia. Illum consectetur suscipit, labore!</p>
+					<a href="post.html" class="m-post-link__read-more">Read More</a>
+				</div>
+
+				<div class="m-post-link">
+					<a href="post.html" class="m-post-link__image" style="background-image:url('public/images/placeholder.jpg')"></a>
+					<a href="post.html" class="m-post-link__title"><h4>Lorem ipsum dolor sit.</h4></a>
+					<p class="m-post-link__meta">September 1, 2015</p>
+					<p class="m-post-link__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe enim beatae nostrum magnam sequi, dolorum mollitia. Illum consectetur suscipit, labore!</p>
+					<a href="post.html" class="m-post-link__read-more">Read More</a>
+				</div>
+
+				<div class="m-post-link">
+					<a href="post.html" class="m-post-link__image" style="background-image:url('public/images/placeholder2.jpg')"></a>
+					<a href="post.html" class="m-post-link__title"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore.</h4></a>
+					<p class="m-post-link__meta">September 1, 2015</p>
+					<p class="m-post-link__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam saepe enim beatae nostrum magnam sequi, dolorum mollitia. Illum consectetur suscipit, labore!</p>
+					<a href="post.html" class="m-post-link__read-more">Read More</a>
+				</div>
+
+				
+
+      </div> <!-- End Page Content -->
+
+      <!-- Sidebar -->
+      <div class="m-page__sidebar hide--s hide--m">
+
+        <div class="ad">
+          <div class="ad__300x250"></div>  
+        </div>
+
+        <a href="" class="o-button o-button--full js-open-modal" data-target="tempPostID" data-type="channel">Stay up to date with SixSeeds</a>
+        
+        <h5 class="o-title">Popular <span class="o-title__alternate">at SixSeeds</span></h5>
+
+        <ul class="m-list">
+          <!-- Basic sidebar post -->
+          <li class="m-list__basic">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder.jpg')"></div>
+              <h6 class="m-list__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</h6>
+              <h6 class="m-list__author">Lorem ipsum</h6>
+            </a>
+          </li>
+          <li class="m-list__basic">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder2.jpg')"></div>
+              <h6 class="m-list__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</h6>
+              <h6 class="m-list__author">Lorem ipsum</h6>
+            </a>
+          </li>
+
+          <!-- Full sidebar post -->
+          <li class="m-list__full">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder.jpg')"></div>
+              <h6 class="m-list__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit adipisicing elit</h6>
+              <h6 class="m-list__author">Lorem ipsum</h6>
+            </a>
+          </li>
+        </ul>
+        
+        <h5 class="o-title">Explore <span class="o-title__alternate">Patheos</span></h5>
+
+        <ul class="m-list">
+          <!-- Third sidebar post -->
+          <li class="m-list__third">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder.jpg')"></div>
+              <h6 class="m-list__title">Lorem</h6>
+            </a>
+          </li>
+          <li class="m-list__third">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder2.jpg')"></div>
+              <h6 class="m-list__title">Lorem</h6>
+            </a>
+          </li>
+          <li class="m-list__third">
+            <a href="">
+              <div class="m-list__image" style="background-image:url('public/images/placeholder.jpg')"></div>
+              <h6 class="m-list__title">Lorem</h6>
+            </a>
+          </li>
+        </ul>
+
+        <div class="ad">
+          <div class="ad__300x250"></div>  
+        </div>
+        <div class="ad">
+          <div class="ad__300x250"></div>  
+        </div>
+      </div>
+    </div>
+  </div> <!-- End Sidebar -->
+
+  <div class="ad">
+    <div class="ad__728x90"></div>  
+  </div>
+
+</article>
 {% endblock %}

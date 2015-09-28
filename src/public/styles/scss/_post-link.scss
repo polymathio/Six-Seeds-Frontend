@@ -1,0 +1,51 @@
+.m-post-link {
+	position: relative;
+	margin-bottom: 4rem;
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: 210px;
+		margin-bottom: 0.7rem;
+
+		background-size: cover;
+		background-position: center;
+	}
+
+	&__title {
+		text-decoration: none;
+		
+		h4 {
+			margin-bottom: 0.25rem;
+			line-height: 1.1em;
+			transition: 0.15s;
+		}
+
+		&:hover, &:active, &:focus {
+			h4 {
+				color: color(blue);
+			}
+		}
+	}
+
+	&__meta {
+		padding: 0;
+		margin-bottom: 0.75rem;		
+
+		font-size: 14px;
+		line-height: 1.5em;
+		color: color(gray);
+		text-decoration: none;
+	}
+
+	&__excerpt {
+		margin-bottom: 0.25rem;
+		text-decoration: none;
+	}
+
+	&__read-more {
+		font-family: $helvetica;
+		font-weight: 600;
+		font-size: 13px;
+	}
+}

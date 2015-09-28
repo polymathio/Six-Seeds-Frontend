@@ -887,7 +887,7 @@ a:hover, a:active, a:focus {
   margin-bottom: 5rem;
 }
 .m-header__title {
-  margin: 0;
+  margin: 0 0 0.25rem;
   color: #FEFEFE;
   font-weight: 600;
 }
@@ -951,13 +951,19 @@ a:hover, a:active, a:focus {
 .m-page {
   position: relative;
   display: table;
+  width: 100%;
 }
 .m-page__content {
   display: table-cell;
   vertical-align: top;
   width: 100%;
-  padding-right: 2rem;
+  padding-right: 4rem;
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .m-page__content {
+    padding-right: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .m-page__content {
@@ -1161,7 +1167,7 @@ a:hover, a:active, a:focus {
 
 .ad__300x250, .ad__160x600, .ad__728x90 {
   display: inline-block;
-  margin: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
   border: 1px solid #ddd;
 }
 
@@ -1395,6 +1401,48 @@ a:hover, a:active, a:focus {
 .m-modal__copied.is-visible {
   visibility: visible;
   opacity: 1;
+}
+
+.m-post-link {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.m-post-link__image {
+  display: block;
+  width: 100%;
+  height: 210px;
+  margin-bottom: 0.7rem;
+  background-size: cover;
+  background-position: center;
+}
+.m-post-link__title {
+  text-decoration: none;
+}
+.m-post-link__title h4 {
+  margin-bottom: 0.25rem;
+  line-height: 1.1em;
+  -webkit-transition: 0.15s;
+          transition: 0.15s;
+}
+.m-post-link__title:hover h4, .m-post-link__title:active h4, .m-post-link__title:focus h4 {
+  color: #69B6D6;
+}
+.m-post-link__meta {
+  padding: 0;
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #8a8a8a;
+  text-decoration: none;
+}
+.m-post-link__excerpt {
+  margin-bottom: 0.25rem;
+  text-decoration: none;
+}
+.m-post-link__read-more {
+  font-family: "helvetica", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
 }
 
 /* Theming */
