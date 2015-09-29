@@ -3,7 +3,7 @@
 
   padding-top: 9rem;
   padding-bottom: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   
 
   &__title {
@@ -76,5 +76,9 @@
       margin-right: -4px;
       padding: 0;
     }
+  }
+
+  .o-button {
+    margin-bottom: 0;
   }
 }

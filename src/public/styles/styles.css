@@ -884,7 +884,7 @@ a:hover, a:active, a:focus {
   position: relative;
   padding-top: 9rem;
   padding-bottom: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 .m-header__title {
   margin: 0 0 0.25rem;
@@ -946,6 +946,9 @@ a:hover, a:active, a:focus {
   margin: 0;
   margin-right: -4px;
   padding: 0;
+}
+.m-header .o-button {
+  margin-bottom: 0;
 }
 
 .m-page {
@@ -1191,7 +1194,7 @@ a:hover, a:active, a:focus {
 .ad--fixed {
   position: absolute;
   left: 1rem;
-  top: 29rem;
+  top: 30.5rem;
 }
 
 .m-modal {
