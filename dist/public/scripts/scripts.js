@@ -4,38 +4,70 @@ var comments = require('./modules/comments.js');
 var ads = require('./modules/ads.js');
 
 $(document).ready(function(){
-	modal.init();
-	comments.init();
-	ads();
+  modal.init();
+  comments.init();
+  ads.init();
 });
 
 },{"./modules/ads.js":2,"./modules/comments.js":3,"./modules/modal.js":4}],2:[function(require,module,exports){
-module.exports = function(){
-	alert('test ad module');
-};
+var ads = {
+
+  // formatId: 31221, fixed sidebar
+  // formatId: 31210, wide banner
+  // formatId: 31212, sidebar square
+
+  init: function() {
+    console.log('ads init');
+
+    /*var sas = sas || {}; 
+    sas.cmd = sas.cmd || []; */
+    
+    sas.cmd.push(function() { 
+      /*sas.call("std", { 
+        siteId: 71012, 
+        pageId: 537314, 
+        formatId: 31210,
+        target: 'path=AdditionalResources;path=Portals;path=Atheist;path=MinorPathIndex;path=NonReligiousPaths;path=Agnosticism;path=Atheism;path=SecularHumanism;Channel=CFT_Atheist;pathNumbers=2465;pathNumbers=142;pathNumbers=143;pathNumbers=144;urlhash=1286045419;',
+        tagId: '31210'
+      });*/
+
+      /*sas.call("std", { 
+        siteId: 71012, 
+        pageId: 537314, 
+        formatId: 31221,
+        target: 'path=AdditionalResources;path=Portals;path=Atheist;path=MinorPathIndex;path=NonReligiousPaths;path=Agnosticism;path=Atheism;path=SecularHumanism;Channel=CFT_Atheist;pathNumbers=2465;pathNumbers=142;pathNumbers=143;pathNumbers=144;urlhash=1286045419;',
+        tagId: '1234'
+      }); */
+
+    });
+
+  }
+}
+
+module.exports = ads;
 },{}],3:[function(require,module,exports){
 var comments = {
-	init: function() {
-		this.cacheDom();
-		this.bindEvents();
-	},
+  init: function() {
+    this.cacheDom();
+    this.bindEvents();
+  },
 
-	reInit: function() {
+  reInit: function() {
 
-	},
+  },
 
-	cacheDom: function() {
-		this.$commentTriggers = $('.js-show-comments')
-	},
+  cacheDom: function() {
+    this.$commentTriggers = $('.js-show-comments')
+  },
 
-	bindEvents: function() {
-		this.$commentTriggers.on('click', function(e) {
-			e.preventDefault();
-			var target = $(this).data('target');
-			$('#comments-' + target).addClass('is-visible');
-			$(this).remove();
-		});
-	}
+  bindEvents: function() {
+    this.$commentTriggers.on('click', function(e) {
+      e.preventDefault();
+      var target = $(this).data('target');
+      $('#comments-' + target).addClass('is-visible');
+      $(this).remove();
+    });
+  }
 }
 
 module.exports = comments;

@@ -1171,7 +1171,6 @@ a:hover, a:active, a:focus {
 .ad__300x250, .ad__160x600, .ad__728x90 {
   display: inline-block;
   margin: 0 0 0.5rem 0;
-  border: 1px solid #ddd;
 }
 
 .ad {

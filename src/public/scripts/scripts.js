@@ -3,7 +3,7 @@ var comments = require('./modules/comments.js');
 var ads = require('./modules/ads.js');
 
 $(document).ready(function(){
-	modal.init();
-	comments.init();
-	ads();
+  modal.init();
+  comments.init();
+  ads.init();
 });
