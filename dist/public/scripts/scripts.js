@@ -2,14 +2,16 @@
 var modal = require('./modules/modal.js');
 var comments = require('./modules/comments.js');
 var ads = require('./modules/ads.js');
+var postLoader = require('./modules/postLoader.js');
 
 $(document).ready(function(){
   modal.init();
   comments.init();
   ads.init();
+  postLoader.init();
 });
 
-},{"./modules/ads.js":2,"./modules/comments.js":3,"./modules/modal.js":4}],2:[function(require,module,exports){
+},{"./modules/ads.js":2,"./modules/comments.js":3,"./modules/modal.js":4,"./modules/postLoader.js":5}],2:[function(require,module,exports){
 var ads = {
 
   // formatId: 31221, fixed sidebar
@@ -17,7 +19,7 @@ var ads = {
   // formatId: 31212, sidebar square
 
   init: function() {
-    console.log('ads init');
+    //console.log('ads init');
 
     /*var sas = sas || {}; 
     sas.cmd = sas.cmd || []; */
@@ -118,4 +120,49 @@ var modal = {
 }
 
 module.exports = modal;
+},{}],5:[function(require,module,exports){
+var postLoader = {
+  init: function() {
+    console.log('postLoader init');
+    this.cacheDom();
+    this.bindEvents();
+
+    this.currentHeight = this.$currentPost.height();
+  },
+
+  reInit: function() {
+
+  },
+
+  cacheDom: function() {
+    this.$body = $('body');
+    this.$nextPost = $('.js-next-post');
+    this.$currentPost = $('.js-current-post');
+  },
+
+  bindEvents: function() {
+
+    $(window).on('scroll', function() {
+      var viewBottom = $(this).scrollTop() + $(this).height();
+      
+      console.log(postLoader.currentHeight + ' ' + viewBottom);
+
+      if (viewBottom - postLoader.currentHeight < 300) {
+        postLoader.handleScroll();
+      }
+    });
+  },
+
+  handleScroll: function() {
+    this.$nextPost.load('post-load.html', function() {
+      console.log('post loaded');
+    });
+  },
+
+  handleResize: function() {
+
+  }
+}
+
+module.exports = postLoader;
 },{}]},{},[1])

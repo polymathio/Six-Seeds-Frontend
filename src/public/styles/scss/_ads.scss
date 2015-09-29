@@ -10,7 +10,7 @@
 	text-align: center;
 	line-height: 0;
 
-	&__300x250 {
+/* 	&__300x250 {
 		@extend %adBg;
 		width: 300px;
 		height: 250px;
@@ -26,12 +26,11 @@
 		@extend %adBg;
 		width: 728px;
 		height: 90px;
-	}
+	} */
 
-	&--fixed {
+	&--center {
 		//temp
-		position: absolute;
-		left: 1rem;
-		top: 30.5rem;
+		display: block;
+		text-align: center;
 	}
 }

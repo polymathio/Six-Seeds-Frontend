@@ -5,7 +5,7 @@ var ads = {
   // formatId: 31212, sidebar square
 
   init: function() {
-    console.log('ads init');
+    //console.log('ads init');
 
     /*var sas = sas || {}; 
     sas.cmd = sas.cmd || []; */

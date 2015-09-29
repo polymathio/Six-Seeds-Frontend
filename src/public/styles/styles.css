@@ -1072,7 +1072,7 @@ a:hover, a:active, a:focus {
 .m-footer {
   position: relative;
   margin-top: 0rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: #69B6D6;
@@ -1168,32 +1168,31 @@ a:hover, a:active, a:focus {
   display: block;
 }
 
-.ad__300x250, .ad__160x600, .ad__728x90 {
-  display: inline-block;
-  margin: 0 0 0.5rem 0;
-}
-
 .ad {
   display: block;
   text-align: center;
   line-height: 0;
+  /* 	&__300x250 {
+  		@extend %adBg;
+  		width: 300px;
+  		height: 250px;
+  	}
+  
+  	&__160x600 {
+  		@extend %adBg;
+  		width: 160px;
+  		height: 600px;
+  	}
+  
+  	&__728x90 {
+  		@extend %adBg;
+  		width: 728px;
+  		height: 90px;
+  	} */
 }
-.ad__300x250 {
-  width: 300px;
-  height: 250px;
-}
-.ad__160x600 {
-  width: 160px;
-  height: 600px;
-}
-.ad__728x90 {
-  width: 728px;
-  height: 90px;
-}
-.ad--fixed {
-  position: absolute;
-  left: 1rem;
-  top: 30.5rem;
+.ad--center {
+  display: block;
+  text-align: center;
 }
 
 .m-modal {

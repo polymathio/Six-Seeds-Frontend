@@ -28,6 +28,20 @@
 
   </head>
   <body class="{% block bodyClass %}{% endblock %}">  
+    
+    <!-- This is the sticky ad -->
+    <div id="sas_1234"></div>
+    <script type="text/javascript">
+       sas.cmd.push(function() { 
+         sas.call("std", { 
+           siteId: 71012, 
+           pageId: 537314, 
+           formatId: 31221,
+           target: 'path=AdditionalResources;path=Portals;path=Atheist;path=MinorPathIndex;path=NonReligiousPaths;path=Agnosticism;path=Atheism;path=SecularHumanism;Channel=CFT_Atheist;pathNumbers=2465;pathNumbers=142;pathNumbers=143;pathNumbers=144;urlhash=1286045419;',
+           tagId: '1234'
+         }); 
+        });
+    </script>
 
     {% block content %}{% endblock %}
 
